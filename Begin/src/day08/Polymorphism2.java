@@ -16,12 +16,12 @@ public class Polymorphism2 {
 		System.out.println("sb.c="+sb.c);
 		sb.func();
 		System.out.println(sb.func(100));
-		
+		//별표!!!! 밑에 예제가 가장 중요함!!
 		System.out.println("3.----------------");
 		Super ss=new Sub();
 		System.out.println("ss.a="+ss.a);
 		System.out.println("ss.b="+ss.b);
-		//System.out.println("ss.c="+ss.c);
+		//System.out.println("ss.c="+ss.c); (접근불가 why?? -> c는 자식이 고유하게 선언한 변수라서!!)
 		ss.func();
 		//System.out.println(ss.func(200));
 		

@@ -54,12 +54,13 @@ class Teacher extends Person{
 
 public class Inheritance2 {
 
-	public static void main(String[] args) {
+	public void main(String[] args) {
 		Person p1=new Person(1,"홍길동");
 		//p1.name="홍길동";
 		//p1.no=1;
 		}
 
 	}
+}
 
 /////////////////////////////////

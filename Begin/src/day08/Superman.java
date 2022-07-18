@@ -1,11 +1,13 @@
 package day08;
 //superman is a human 관계까 성립해야만 가능 !!!!
+//superman is a Object
+//sub class, Derived class(자식클래스)
 public class Superman extends Human {
 	private static final String String = null;
 	int power;
 
 	public Superman() {
-			
+			//super(); <----휴먼의 기본생성자가 없으면 오류가 남
 	}
 	public Superman(String n,int h,int p) {
 		name=n;
