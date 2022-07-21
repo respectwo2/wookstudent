@@ -2,6 +2,7 @@ package day12;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.*;
 /**
  * 퐁씨 성을 가진 사람들이 이용할 수 있는 애플리케이션
  * 작성자: 박성욱
@@ -90,6 +91,27 @@ public class PongApp extends JFrame {
 				//public void setText(String t)
 			}else if(obj==btSave) {
 				//setTitle("save");
+				String content=ta.getText();
+				if(content.trim().isEmpty()) {//내용이 없다면
+					JOptionPane.showMessageDialog(p,"저장할 내용이 없어요");
+					return;
+				}
+				//내용이 있다면
+				String fileName="C:/myjava/PongList.txt";
+				try {
+					FileWriter fw= new FileWriter(fileName);	
+					fw.write(content);
+					fw.flush();
+					fw.close();
+					setTitle(fileName+"에 저장 완료");	
+				}catch(IOException ex) {
+					setTitle("파일 쓰기 중 에러: "+ex.getMessage());
+					
+				}
+				
+				
+				
+				
 			}
 		}
 	}
